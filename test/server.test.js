@@ -20,7 +20,7 @@ test('GET / responde 200 con un mensaje y una version', async () => {
 
     const parsed = JSON.parse(response.data);
 
-    assert.strictEqual(response.status, 500);
+    assert.strictEqual(response.status, 200);
     assert.ok(parsed.message, 'la respuesta debe incluir un mensaje');
     assert.ok(parsed.version, 'la respuesta debe incluir una version');
   } finally {
