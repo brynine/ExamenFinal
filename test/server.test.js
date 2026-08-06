@@ -24,7 +24,6 @@ test('GET / responde 200 con un mensaje y una version', async () => {
     assert.ok(parsed.message, 'la respuesta debe incluir un mensaje');
     assert.ok(parsed.version, 'la respuesta debe incluir una version');
   } finally {
-    // Esto se ejecuta SIEMPRE, incluso si la prueba falla, liberando el puerto y evitando que el pipeline se cuelgue
     server.close();
   }
 });
